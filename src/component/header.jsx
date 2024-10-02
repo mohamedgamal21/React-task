@@ -1,14 +1,12 @@
-// import Button from "./button.jsx";
+
 import SearchBar from "./searchBar.jsx";
 import SortItem from "./sortItem.jsx";
 
-
-export default function Header() { 
+export default function Header({ onSearchChange, onSortChange }) {
     return (
         <div className="flex justify-between">
-            <SearchBar />
-            <SortItem />
-            {/* <Button /> */}
+            <SearchBar onSearchChange={onSearchChange} />
+            <SortItem onSortChange={onSortChange} />]
         </div>
-    )
-};
+    );
+}
